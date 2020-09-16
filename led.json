@@ -1,0 +1,74 @@
+{
+	"id": "com.demo.ts",
+	"version": "1.0.0",
+	"name": "Demo traffic signal",
+	"description": "Traffic signal",
+	"newInstancePrefix": "TrafficSignal",
+	"icon": "https://the-irregularity.github.io/sac_widget_test/box/icon.png",
+	"vendor": "Demo",
+	"eula": "Eula",
+	"license": "1.0",
+
+	"webcomponents": [{
+			"kind": "main",
+			"tag": "com-demo-gauge",
+			"url": "https://the-irregularity.github.io/sac_widget_test/led/led.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge",
+			"url": "https://the-irregularity.github.io/sac_widget_test/led/led_sps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge",
+			"url": "https://the-irregularity.github.io/sac_widget_test/led/led_bps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+
+	"properties": {
+		"value": {
+			"type": "number",
+			"description": "Signal 123",
+			"default": 1
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+
+	"methods": {
+		"setValue": {
+			"description": "Sets the guage value.",
+			"parameters": [{
+					"name": "newValue",
+					"type": "number",
+					"description": "Signal value"
+				}
+			],
+			"body": "this.value = newValue;"
+		},
+		"getValue": {
+			"returnType": "number",
+			"description": "Returns the signal value.",
+			"body": "return this.value;"
+		}
+	},
+
+	"events": {
+		"onClick": {
+			"description": "Called when user clicks the box."
+		}
+	}
+}
