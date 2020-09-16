@@ -119,5 +119,5 @@
 			this.render(this.$value);
 		}
 	}	
-	customElements.define("com-demo-ts", Box);
+	customElements.define("com-demo-led", Box);
 })();

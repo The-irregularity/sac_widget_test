@@ -1,5 +1,5 @@
 {
-	"id": "com.demo.ts",
+	"id": "com.demo.led",
 	"version": "1.0.0",
 	"name": "Demo traffic signal",
 	"description": "Traffic signal",
@@ -11,21 +11,21 @@
 
 	"webcomponents": [{
 			"kind": "main",
-			"tag": "com-demo-gauge",
+			"tag": "com-demo-led",
 			"url": "https://the-irregularity.github.io/sac_widget_test/led/led.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
+			"tag": "com-demo-led-sps",
 			"url": "https://the-irregularity.github.io/sac_widget_test/led/led_sps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
+			"tag": "com-demo-led-bps",
 			"url": "https://the-irregularity.github.io/sac_widget_test/led/led_bps.js",
 			"integrity": "",
 			"ignoreIntegrity": true

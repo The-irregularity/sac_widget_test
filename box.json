@@ -4,7 +4,7 @@
 	"name": "Demo guage",
 	"description": "Gauge demo",
 	"newInstancePrefix": "Gauge",
-	"icon": "https://biba-int-sc.bmwgroup.net/plattform/sac/box/icon.png",
+	"icon": "https://the-irregularity.github.io/sac_widget_test/box/icon.png",
 	"vendor": "Demo",
 	"eula": "Eula",
 	"license": "1.0",
@@ -12,20 +12,23 @@
 	"webcomponents": [{
 			"kind": "main",
 			"tag": "com-demo-gauge",
-			"url": "https://biba-int-sc.bmwgroup.net/plattform/sac/box/box.js",
-			"integrity": ""
+			"url": "https://the-irregularity.github.io/sac_widget_test/box/box.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		},
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
-			"url": "https://biba-int-sc.bmwgroup.net/plattform/sac/box/box_sps.js",
-			"integrity": ""
+			"tag": "com-demo-gauge-sps",
+			"url": "https://the-irregularity.github.io/sac_widget_test/box/box_sps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		},
 		{
 			"kind": "main",
-			"tag": "com-demo-gauge",
-			"url": "https://biba-int-sc.bmwgroup.net/plattform/sac/box/box_bps.js",
-			"integrity": ""
+			"tag": "com-demo-gauge-bps",
+			"url": "https://the-irregularity.github.io/sac_widget_test/box/box_bps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}
 	],
 
