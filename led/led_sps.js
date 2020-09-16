@@ -44,3 +44,5 @@
 	}
 
 customElements.define("com-demo-led-sps", LedSps);
+
+})();
