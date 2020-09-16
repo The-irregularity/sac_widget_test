@@ -67,7 +67,7 @@
 			switch(val) {
 			  case 1:
 				// Red
-				this.$style.innerHTML = ':host { 	border-radius: 10px; 	border-width: 2px; 	border-color: black; 	border-style: solid; 	display: block; } body {   background: #fff; }  .led-box {   height: 30px;   width: 30px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 24px;   height: 24px;   background-color: #F00;   border-radius: 50%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { 	border-radius: 10px; display: block; } body {   background: #fff; }  .led-box {   height: 30px;   width: 30px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 24px;   height: 24px;   background-color: #F00;   border-radius: 50%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
 				break;
 			  case 2:
 				// Yellow
@@ -79,7 +79,7 @@
 				break;
 			  default:
 			  //Red
-				this.$style.innerHTML = ':host { 	border-radius: 10px; 	border-width: 2px; 	border-color: black; 	border-style: solid; 	display: block; } body {   background: #fff; }  .led-box {   height: 30px;   width: 30px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 24px;   height: 24px;   background-color: #F00;   border-radius: 50%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { 	border-radius: 10px; 	display: block; } body {   background: #fff; }  .led-box {   height: 30px;   width: 30px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 24px;   height: 24px;   background-color: #F00;   border-radius: 50%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
 				break;			  
 			}
 
