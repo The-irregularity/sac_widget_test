@@ -71,11 +71,11 @@
 				break;
 			  case 2:
 				// Yellow
-				this.$style.innerHTML = ':host { border-radius: 10px; border-width: 2px; border-color: black; border-style: solid; display: block; } body { background: #fff; }  .led-box { height: 30px; width: 30px; margin: 10px 0; float: left; }  .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 24px; height: 24px; background-color: #FF0; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; }  .led-box { height: 30px; width: 30px; margin: 10px 0; float: left; }  .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 24px; height: 24px; background-color: #FF0; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;		  }';
 				break;
 			  case 3:
 				// Green
-				this.$style.innerHTML = ':host { border-radius: 10px; border-width: 2px; border-color: black; border-style: solid; display: block; } body { background: #fff; } .led-box { height: 30px; width: 30px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 24px; height: 24px; background-color: #ABFF00; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; } .led-box { height: 30px; width: 30px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 24px; height: 24px; background-color: #ABFF00; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
 				break;
 			  default:
 			  //Red
