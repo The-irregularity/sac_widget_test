@@ -49,14 +49,13 @@
 		</div>
 	`;
 
-	class Box extends HTMLElement {
+	class Led extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
 			this.$style = shadowRoot.querySelector('style');			
-			this.$led-green = shadowRoot.querySelector('led-green');
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
