@@ -308,10 +308,8 @@
 }		
     </style>
 
-
-	<body>
 		<div class="gauge-example">
-			<div>
+			<div id="modvar">
 				<h1>Memory</h1>
 				<div class="gauge" id="demoGauge" style="
 					--gauge-value:0;
@@ -351,7 +349,6 @@
 				</div>	
 			</div>
 		</div>
-	</body>
 	`;
 
 	class Box extends HTMLElement {
@@ -360,7 +357,8 @@
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
-			this.$body = shadowRoot.querySelector('body');			
+			this.$modvar = shadowRoot.querySelector('div[data-id=modvar]');
+			console.log(this.$modvar.innerHTML);			
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
@@ -373,8 +371,7 @@
 		render(val, info) {
 			if(val >=0 && val<=100) {
 				console.log(val, info);
-				console.log(this.$body.innerHTML);
-                this.$body.innerHTML = '<div class="gauge-example"> <div><h1>' + info + '</h1> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:200px; height:200px;"> 				 <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"></div> <div class="tithe" style="--gauge-tithe-tick:2;"></div> <div class="tithe" style="--gauge-tithe-tick:3;"></div> <div class="tithe" style="--gauge-tithe-tick:4;"></div> <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div> </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="labels"> <div class="value-label">' + val + '</div> </div>  </div> </div>';
+                this.$modvar.innerHTML = '<div class="gauge-example"> <div><h1>' + info + '</h1> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:200px; height:200px;"> 				 <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"></div> <div class="tithe" style="--gauge-tithe-tick:2;"></div> <div class="tithe" style="--gauge-tithe-tick:3;"></div> <div class="tithe" style="--gauge-tithe-tick:4;"></div> <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div> </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="labels"> <div class="value-label">' + val + '</div> </div>  </div> </div>';
 			}
 		}
 		  	  
