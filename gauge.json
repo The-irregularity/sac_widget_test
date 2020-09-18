@@ -1,0 +1,84 @@
+{
+	"id": "com.demo.gauge1",
+	"version": "1.0.0",
+	"name": "Demo guage1",
+	"description": "Gauge demo1",
+	"newInstancePrefix": "Gauge1",
+	"icon": "https://the-irregularity.github.io/sac_widget_test/box/icon.png",
+	"vendor": "Demo",
+	"eula": "Eula",
+	"license": "1.0",
+
+	"webcomponents": [{
+			"kind": "main",
+			"tag": "com-demo-gauge1",
+			"url": "https://the-irregularity.github.io/sac_widget_test/gauge/gauge.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge1-sps",
+			"url": "https://the-irregularity.github.io/sac_widget_test/gauge/gauge_sps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "main",
+			"tag": "com-demo-gauge1-bps",
+			"url": "https://the-irregularity.github.io/sac_widget_test/gauge/gauge_bps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+
+	"properties": {
+		"value": {
+			"type": "number",
+			"description": "Gauge value",
+			"default": 0
+		},
+		"info": {
+			"type": "string",
+			"description": "Gauge info",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 100
+		},
+		"height": {
+			"type": "integer",
+			"default": 100
+		}
+	},
+
+	"methods": {
+		"setValue": {
+			"description": "Sets the guage value.",
+			"parameters": [{
+					"name": "newValue",
+					"type": "number",
+					"description": "Gauge value"
+				},
+				{
+					"name": "newInfo",
+					"type": "string",
+					"description": "Gauge info"
+				}
+			],
+			"body": "this.value = newValue; this.info = newInfo;"
+		},
+		"getValue": {
+			"returnType": "number",
+			"description": "Returns the gauge value.",
+			"body": "return this.value;"
+		}
+	},
+
+	"events": {
+		"onClick": {
+			"description": "Called when user clicks the box."
+		}
+	}
+}
