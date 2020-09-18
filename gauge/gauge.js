@@ -381,7 +381,7 @@
 		
 		render(val, info) {
 			if(val >=0 && val<=100) {
-                document.getElementById(id).style.setProperty('--gauge-value', newGaugeValue);				
+                document.getElementById('demoGauge').style.setProperty('--gauge-value', newGaugeValue);				
 			}
 		}
 		  	  
