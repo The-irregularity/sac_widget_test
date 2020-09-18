@@ -189,14 +189,6 @@
 	height: 0
 }
 
-.gauge .labels .value-label::after {
-	counter-reset: gauge-value var(--gauge-display-value);
-	content: counter(gauge-value);
-	text-align: right;
-	float: right;
-	width: 3em
-}
-
 .guide-x,
 .guide-y {
 	background-color: orange;
@@ -319,6 +311,7 @@
 
 	<body>
 		<div class="gauge-example">
+			<div>
 				<h1>Memory</h1>
 				<div class="gauge" id="demoGauge" style="
 					--gauge-value:0;
@@ -355,7 +348,8 @@
 					<div class="labels">
 						<div class="value-label"></div>
 					</div>
-				</div>			
+				</div>	
+			</div>
 		</div>
 	<body>
 	`;
@@ -379,7 +373,7 @@
 		render(val, info) {
 			if(val >=0 && val<=100) {
 				console.log(val, info);
-                this.$body.innerHTML = '<div class="gauge-example"> <h1>' + info + '</h1> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:200px; height:200px;"> 				 <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"></div> <div class="tithe" style="--gauge-tithe-tick:2;"></div> <div class="tithe" style="--gauge-tithe-tick:3;"></div> <div class="tithe" style="--gauge-tithe-tick:4;"></div> <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div> </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> 				 <div class="labels"> <div class="value-label"></div> </div>  </div>			 </div>';
+                this.$body.innerHTML = '<div class="gauge-example"> <div><h1>' + info + '</h1> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:200px; height:200px;"> 				 <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"></div> <div class="tithe" style="--gauge-tithe-tick:2;"></div> <div class="tithe" style="--gauge-tithe-tick:3;"></div> <div class="tithe" style="--gauge-tithe-tick:4;"></div> <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div> </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="labels"> <div class="value-label">' + val + '</div> </div>  </div> </div>';
 				console.log(this.$body.innerHTML);
 			}
 		}
