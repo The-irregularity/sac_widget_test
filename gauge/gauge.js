@@ -351,7 +351,7 @@
 				</div>	
 			</div>
 		</div>
-	<body>
+	</body>
 	`;
 
 	class Box extends HTMLElement {
