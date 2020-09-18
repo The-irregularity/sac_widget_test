@@ -399,7 +399,7 @@
 			}
 			
 			
-			this.render(this.$value, this.$info, this.$color);
+			this.render(this.$value, this.$info);
 		}
 	}	
 	customElements.define("com-demo-gauge1", Box);
