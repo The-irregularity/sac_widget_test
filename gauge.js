@@ -57,8 +57,8 @@
 	background: grey;
 	border: 2px solid black;
 	border-radius: 50%;
-	width: 340px;
-	height: 340px;
+	width: 300px;
+	height: 300px;
 	font-weight: 700;
 	font-size: 34px
 }
@@ -186,10 +186,11 @@
 
 .gauge .labels .value-label {
 	position: relative;
-	top: 80%;
-	left: 51%;
+	top: 75%;
+	left: 45%;
 	width: 10%;
-	height: 0
+	text-align: center;	
+	height: 0;
 }
 
 .gauge .labels .value-label-min {
@@ -264,22 +265,22 @@
   position: absolute;
   top: 0;
   right: 0;
-  border-right: 150px solid white;
-  border-top: 150px solid transparent;
+  border-right: 130px solid white;
+  border-top: 130px solid transparent;
   transform-origin: bottom left;
   transform: rotate (0deg);
 }
 .sect:nth-child(2) {
-  transform: rotate(0deg);
-  border-right: 150px solid orange;
+  transform: rotate(2deg);
+  border-right: 130px solid orange;
 }
 .sect:nth-child(3) {
-  transform: rotate(45deg);
-  border-right: 150px solid red;
+  transform: rotate(47deg);
+  border-right: 130px solid red;
 }
 .sect:nth-child(4) {
-  transform: rotate(90deg);
-  border-right: 150px solid white;
+  transform: rotate(92deg);
+  border-right: 130px solid white;
 }
 
 .centercircle {
@@ -297,7 +298,7 @@
 	
 		<div class="gauge-example">
 			<div id="modvar">
-            <h1>Memory</h1>
+            <h2>Memory</h2>
 			<div  class="outer">
 				<div class="gauge" id="demoGauge" style="
 					--gauge-value:0;
@@ -418,7 +419,7 @@
 		render(val, info) {
 			if(val >=0 && val<=100) {
 				console.log(val, info);
-                this.$modvar.innerHTML = '<h1>' + info + '</h1> <div  class="outer"> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:66.7%; height:66.7%;">  <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"> </div>		 <div class="tithe" style="--gauge-tithe-tick:2;"></div>	 <div class="tithe" style="--gauge-tithe-tick:3;"></div>	 <div class="tithe" style="--gauge-tithe-tick:4;"> </div>	 <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div>  <div class="tnth" style="--gauge-tithe-tick-tnth:1;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:2;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:3;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:4;"></div>		  <div class="tnth" style="--gauge-tithe-tick-tnth:6;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:7;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:8;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:9;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:11;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:12;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:13;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:14;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:16;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:17;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:18;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:19;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:21;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:22;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:23;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:24;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:26;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:27;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:28;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:29;"></div>								  <div class="tnth" style="--gauge-tithe-tick-tnth:31;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:32;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:33;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:34;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:36;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:37;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:38;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:39;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:41;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:42;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:43;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:44;"></div>		   <div class="tnth" style="--gauge-tithe-tick-tnth:46;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:47;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:48;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:49;"></div>								 </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="centercircle"> </div> <div class="labels"> <div class="value-label">' + val + '</div> <div class="value-label-min">0</div> <div class="value-label-max">100</div> <div class="value-label-mid">50</div> </div> <div><p style="position: absolute; top: 60px; left: 75px;"></p></div>  </div> </div>';
+                this.$modvar.innerHTML = '<h2>' + info + '</h2> <div  class="outer"> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:66.7%; height:66.7%;">  <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"> </div>		 <div class="tithe" style="--gauge-tithe-tick:2;"></div>	 <div class="tithe" style="--gauge-tithe-tick:3;"></div>	 <div class="tithe" style="--gauge-tithe-tick:4;"> </div>	 <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div>  <div class="tnth" style="--gauge-tithe-tick-tnth:1;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:2;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:3;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:4;"></div>		  <div class="tnth" style="--gauge-tithe-tick-tnth:6;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:7;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:8;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:9;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:11;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:12;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:13;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:14;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:16;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:17;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:18;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:19;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:21;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:22;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:23;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:24;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:26;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:27;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:28;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:29;"></div>								  <div class="tnth" style="--gauge-tithe-tick-tnth:31;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:32;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:33;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:34;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:36;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:37;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:38;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:39;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:41;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:42;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:43;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:44;"></div>		   <div class="tnth" style="--gauge-tithe-tick-tnth:46;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:47;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:48;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:49;"></div>								 </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="centercircle"> </div> <div class="labels"> <div class="value-label">' + val + '</div> <div class="value-label-min">0</div> <div class="value-label-max">100</div> <div class="value-label-mid">50</div> </div> <div><p style="position: absolute; top: 60px; left: 75px;"></p></div>  </div> </div>';
 			}
 		}
 		  	  
