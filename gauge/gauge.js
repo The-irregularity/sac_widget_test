@@ -1,7 +1,7 @@
 (function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
-   <style>
+<style>
         body {
             font-family: sans-serif;
             background-color: #aaa;
@@ -10,23 +10,22 @@
         .gauge-example {
             display: flex;
             flex-wrap: wrap;
-            text-align: left;
+            text-align: center;
             justify-content: left;
         }
 
-        .gauge-example>div {
+        .gauge-example-div {
             background-color: transparent;
-            width: 0%;
-            min-width: 350px;
+            width: 10%;
+            
             margin: 5px;
             text-align: center;
-            padding-top: 1px;
             line-height: 25px;
             font-size: 14px;
+			border: solid 1px #fff;
         }
 
         .gauge-example>.gauge-description {
-            padding: 1em;
             text-align: left;
         }
 
@@ -55,7 +54,7 @@
 .outer {
 	position: relative;
 	overflow: hidden;
-	background: var(--gauge-bg);
+	background: grey;
 	border: 2px solid black;
 	border-radius: 50%;
 	width: 340px;
@@ -70,20 +69,12 @@
 	background: var(--gauge-bg);
 	border: .55em solid #EAE4E3;
 	border-radius: 50%;
-	min-width: 300px;
-	min-height: 300px;
+	min-width: 88.24%;
+	min-height: 88.24%;	
 	font-weight: 700;
 	font-size: 34px
 } 
-.gauge .kpi{
-	position: absolute;
-	border: .55em solid #EAE4E3;
-	border-radius: 50%;
-	min-width: 250px;
-	min-height: 250px;
-	font-weight: 700;
-	font-size: 34px
-}
+
 .gauge .ticks {
 	position: absolute;
 	width: 100%;
@@ -100,7 +91,7 @@
 	width: 100%;
 	height: 1%;
 	margin-bottom: -1%;
-	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 4%, #000 4%, #000 15%, rgba(0, 0, 0, 0) 15%);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 0%, #000 1%, #000 13%, rgba(0, 0, 0, 0) 13%);
 	transform: rotate(-45deg)
 }
 
@@ -112,7 +103,7 @@
 	width: 100%;
 	height: 1%;
 	margin-bottom: -1%;
-	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 4%, #000 4%, #000 15%, rgba(0, 0, 0, 0) 15%);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 0%, #000 1%, #000 13%, rgba(0, 0, 0, 0) 13%);
 	transform: rotate(90deg)
 }
 
@@ -124,7 +115,7 @@
 	width: 100%;
 	height: 1%;
 	margin-bottom: -1%;
-	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 4%, #000 4%, #000 15%, rgba(0, 0, 0, 0) 15%);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 0%, #000 1%, #000 13%, rgba(0, 0, 0, 0) 13%);
 	transform: rotate(225deg)
 }
 
@@ -137,18 +128,30 @@
 	width: 100%;
 	height: 1%;
 	margin-bottom: -1%;
-	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 10%, #000 10%, #000 15%, rgba(0, 0, 0, 0) 15%)
+	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 0%, #000 1%, #000 8%, rgba(0, 0, 0, 0) 8%)
+}
+
+.gauge .ticks .tnth {
+	transform: rotate(calc(5.4deg * var(--gauge-tithe-tick-tnth) - 45deg));
+	background: black;
+	position: relative;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 1%;
+	margin-bottom: -1%;
+	background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0, rgba(0, 0, 0, 0) 0%, #000 1%, #000 4%, rgba(0, 0, 0, 0) 4%)
 }
 
 .gauge .tick-circle {
 	position: absolute;
-	top: 15%;
-	left: 15%;
-	width: calc(70% - .1em);
-	height: calc(70% - .1em);
-	border-left: .1em solid transparent;
-	border-top: .1em solid transparent;
-	border-right: .1em solid transparent;
+	top: 7%;
+	left: 7%;
+	width: calc(85% - .1em);
+	height: calc(85% - .1em);
+	border-left: .1em solid  transparent;
+	border-top: .1em solid  transparent;
+	border-right: .1em solid  transparent;
 	border-bottom: .1em solid transparent;
 	border-radius: 100%
 }
@@ -183,10 +186,45 @@
 
 .gauge .labels .value-label {
 	position: relative;
-	top: 75%;
+	top: 80%;
 	left: 51%;
 	width: 10%;
 	height: 0
+}
+
+.gauge .labels .value-label-min {
+	position: relative;
+	top: 60%;
+	left: 22%;
+	width: 10%;
+	font-size: 16px;
+	height: 0
+}
+
+.gauge .labels .value-label-max {
+	position: relative;
+	top: 60%;
+	left: 70%;
+	width: 10%;
+	font-size: 16px;
+	height: 0
+}
+
+.gauge .labels .value-label-mid {
+	position: relative;
+	top: 8%;
+	left: 45%;
+	width: 10%;
+	font-size: 16px;
+	height: 0
+}
+
+.gauge .labels .value-label::after {
+	counter-reset: gauge-value var(--gauge-display-value);
+	content: counter(gauge-value);
+	text-align: center;
+	float: right;
+	width: 2em
 }
 
 .guide-x,
@@ -216,38 +254,7 @@
   width: calc(88% - .1em);
   height: calc(88% - .1em);
   border-radius: 100%;
-  background-color: #ffffff;
-}
-
-.circle-border-error {
-  position: absolute;
-  overflow: hidden;
-  text-align: center;
-  top: 5%;
-  left: 5%;
-  width: calc(95% - .1em);
-  height: calc(95% - .1em);
-  margin-left: 1%;
-  border-radius: 100%;
-  background-color: #E53B3B;
-  background-image: linear-gradient(315deg, transparent 50%, #fff 50%), 
-					linear-gradient(175deg, transparent 50%, #fff 50%);
-  transform: rotate(51deg) skewX(0deg);
-}
-
-.circle-border-warning {
-  position: absolute;
-
-  text-align: center;
-
-  width: calc(100% - .1em);
-  height: calc(100% - .1em);
-  margin-left: .5%;
-  border-radius: 100%;
   background-color: #fff;
-  background-image: linear-gradient(340deg, transparent 20%, #fff 1%),
-                    linear-gradient(300deg, yellow 25%, red 25%);				
-  transform: rotate(300deg) skewX(0deg);
 }
 
 .circle-border-final {
@@ -259,23 +266,23 @@
   overflow: hidden;
   transform: rotate(0deg) skewX(0deg);
 }
+
 .sect {
 
-  height: 0px;
-  width: 0px;
   position: absolute;
   top: 0;
   right: 0;
   border-right: 150px solid white;
   border-top: 150px solid transparent;
   transform-origin: bottom left;
+  transform: rotate (0deg);
 }
 .sect:nth-child(2) {
-  transform: rotate(10deg);
+  transform: rotate(0deg);
   border-right: 150px solid orange;
 }
 .sect:nth-child(3) {
-  transform: rotate(50deg);
+  transform: rotate(45deg);
   border-right: 150px solid red;
 }
 .sect:nth-child(4) {
@@ -283,70 +290,118 @@
   border-right: 150px solid white;
 }
 
-.sect {
-
-  height: 0px;
-  width: 0px;
+.centercircle {
   position: absolute;
-  top: 0;
-  right: 0;
-  border-right: 150px solid white;
-  border-top: 150px solid transparent;
-  transform-origin: bottom left;
+  top: 45%;
+  left: 45%;
+  text-align: center;
+  width: calc(10%);
+  height: calc(10%);
+  border-radius: 100%;
+  background-color: #3498eb;
 }
-.sect:nth-child(2) {
-  transform: rotate(10deg);
-  border-right: 150px solid orange;
-}
-.sect:nth-child(3) {
-  transform: rotate(50deg);
-  border-right: 150px solid red;
-}
-.sect:nth-child(4) {
-  transform: rotate(90deg);
-  border-right: 150px solid white;
-}		
+	
     </style>
-
+	
 		<div class="gauge-example">
 			<div id="modvar">
-				<h1>Memory</h1>
+            <h1>Memory</h1>
+			<div  class="outer">
 				<div class="gauge" id="demoGauge" style="
 					--gauge-value:0;
-					width:200px;
-					height:200px;">
-										
-					<div class="circle-border-final">
-						<div class="sect"></div>
-						<div class="sect"></div>
-						<div class="sect"></div>
-						<div class="sect"></div>
-						<div class='circle'></div>						
-					</div>
+					width:66.7%;
+					height:66.7%;">
+						
+						<div class="circle-border-final">
+							<div class="sect"></div>
+							<div class="sect"></div>
+							<div class="sect"></div>
+							<div class="sect"></div>
+							<div class='circle'></div>						
+						</div>
 
-					<div class="ticks">
-						<div class="tithe" style="--gauge-tithe-tick:1;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:2;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:3;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:4;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:6;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:7;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:8;"></div>
-						<div class="tithe" style="--gauge-tithe-tick:9;"></div>
-						<div class="min"></div>
-						<div class="mid"></div>
-						<div class="max"></div>
-					</div>
-					<div class="tick-circle"></div>
+						<div class="ticks">
+							<div class="tithe" style="--gauge-tithe-tick:1;"> </div>		
+							<div class="tithe" style="--gauge-tithe-tick:2;"></div>	
+							<div class="tithe" style="--gauge-tithe-tick:3;"></div>	
+							<div class="tithe" style="--gauge-tithe-tick:4;">
+							</div>	
+							<div class="tithe" style="--gauge-tithe-tick:6;"></div>
+							<div class="tithe" style="--gauge-tithe-tick:7;"></div>
+							<div class="tithe" style="--gauge-tithe-tick:8;"></div>
+							<div class="tithe" style="--gauge-tithe-tick:9;"></div>
+							<div class="min"></div>
+							<div class="mid"></div>
+							<div class="max"></div>
+							
+							<div class="tnth" style="--gauge-tithe-tick-tnth:1;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:2;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:3;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:4;"></div>		
 
-					<div class="needle">
-						<div class="needle-head"></div>
-					</div>
-										
-					<div class="labels">
-						<div class="value-label"></div>
-					</div>
-				</div>	
+							<div class="tnth" style="--gauge-tithe-tick-tnth:6;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:7;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:8;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:9;"></div>			
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:11;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:12;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:13;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:14;"></div>			
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:16;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:17;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:18;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:19;"></div>	
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:21;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:22;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:23;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:24;"></div>	
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:26;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:27;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:28;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:29;"></div>								
+							
+							<div class="tnth" style="--gauge-tithe-tick-tnth:31;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:32;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:33;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:34;"></div>	
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:36;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:37;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:38;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:39;"></div>	
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:41;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:42;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:43;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:44;"></div>		
+
+
+							<div class="tnth" style="--gauge-tithe-tick-tnth:46;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:47;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:48;"></div>
+							<div class="tnth" style="--gauge-tithe-tick-tnth:49;"></div>								
+						</div>
+						<div class="tick-circle"></div>
+
+						<div class="needle">
+							<div class="needle-head"></div>
+						</div>
+						<div class="centercircle">
+						</div>
+						<div class="labels">
+							<div class="value-label"></div>
+							<div class="value-label-min">0</div>
+							<div class="value-label-max">100</div>
+							<div class="value-label-mid">50</div>
+						</div>
+						<div><p style="position: absolute; top: 60px; left: 75px;"></p></div>
+					
+				</div>
+			</div>
 			</div>
 		</div>
 	`;
@@ -371,7 +426,7 @@
 		render(val, info) {
 			if(val >=0 && val<=100) {
 				console.log(val, info);
-                this.$modvar.innerHTML = '<h1>' + info + '</h1> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:200px; height:200px;"> 				 <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="circle"></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"></div> <div class="tithe" style="--gauge-tithe-tick:2;"></div> <div class="tithe" style="--gauge-tithe-tick:3;"></div> <div class="tithe" style="--gauge-tithe-tick:4;"></div> <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div> </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="labels"> <div class="value-label">' + val + '</div> </div>';
+                this.$modvar.innerHTML = '<h1>' + info + '</h1> <div  class="outer"> <div class="gauge" id="demoGauge" style=" --gauge-value:' + val + '; width:66.7%; height:66.7%;">  <div class="circle-border-final"> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class="sect"></div> <div class='circle'></div>						 </div>  <div class="ticks"> <div class="tithe" style="--gauge-tithe-tick:1;"> </div>		 <div class="tithe" style="--gauge-tithe-tick:2;"></div>	 <div class="tithe" style="--gauge-tithe-tick:3;"></div>	 <div class="tithe" style="--gauge-tithe-tick:4;"> </div>	 <div class="tithe" style="--gauge-tithe-tick:6;"></div> <div class="tithe" style="--gauge-tithe-tick:7;"></div> <div class="tithe" style="--gauge-tithe-tick:8;"></div> <div class="tithe" style="--gauge-tithe-tick:9;"></div> <div class="min"></div> <div class="mid"></div> <div class="max"></div>  <div class="tnth" style="--gauge-tithe-tick-tnth:1;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:2;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:3;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:4;"></div>		  <div class="tnth" style="--gauge-tithe-tick-tnth:6;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:7;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:8;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:9;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:11;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:12;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:13;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:14;"></div>			  <div class="tnth" style="--gauge-tithe-tick-tnth:16;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:17;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:18;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:19;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:21;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:22;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:23;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:24;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:26;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:27;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:28;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:29;"></div>								  <div class="tnth" style="--gauge-tithe-tick-tnth:31;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:32;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:33;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:34;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:36;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:37;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:38;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:39;"></div>	  <div class="tnth" style="--gauge-tithe-tick-tnth:41;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:42;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:43;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:44;"></div>		   <div class="tnth" style="--gauge-tithe-tick-tnth:46;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:47;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:48;"></div> <div class="tnth" style="--gauge-tithe-tick-tnth:49;"></div>								 </div> <div class="tick-circle"></div>  <div class="needle"> <div class="needle-head"></div> </div> <div class="centercircle"> </div> <div class="labels"> <div class="value-label">' + val + '</div> <div class="value-label-min">0</div> <div class="value-label-max">100</div> <div class="value-label-mid">50</div> </div> <div><p style="position: absolute; top: 60px; left: 75px;"></p></div>  </div> </div>';
 			}
 		}
 		  	  
