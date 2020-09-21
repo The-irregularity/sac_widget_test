@@ -186,10 +186,11 @@
 
 .gauge .labels .value-label {
 	position: relative;
-	top: 80%;
-	left: 51%;
+	top: 75%;
+	left: 45%;
 	width: 10%;
-	height: 0
+	text-align: center;	
+	height: 0;
 }
 
 .gauge .labels .value-label-min {
