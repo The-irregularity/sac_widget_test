@@ -194,7 +194,7 @@
 
 .gauge .labels .value-label-min {
 	position: relative;
-	top: 60%;
+	top: 72%;
 	left: 22%;
 	width: 10%;
 	font-size: 16px;
@@ -203,7 +203,7 @@
 
 .gauge .labels .value-label-max {
 	position: relative;
-	top: 60%;
+	top: 72%;
 	left: 70%;
 	width: 10%;
 	font-size: 16px;
@@ -212,7 +212,7 @@
 
 .gauge .labels .value-label-mid {
 	position: relative;
-	top: 8%;
+	top: 18%;
 	left: 45%;
 	width: 10%;
 	font-size: 16px;
