@@ -317,7 +317,7 @@
 							<div class="sect"></div>
 							<div class="sect"></div>
 							<div class="sect"></div>
-							<div class='circle'></div>						
+							<div class="circle"></div>						
 						</div>
 
 						<div class="ticks">
