@@ -219,14 +219,6 @@
 	height: 0
 }
 
-.gauge .labels .value-label::after {
-	counter-reset: gauge-value var(--gauge-display-value);
-	content: counter(gauge-value);
-	text-align: center;
-	float: right;
-	width: 2em
-}
-
 .guide-x,
 .guide-y {
 	background-color: orange;
