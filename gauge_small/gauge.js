@@ -67,12 +67,12 @@
 .gauge {
 	position: relative;
 	background: var(--gauge-bg);
-	border: .55em solid #EAE4E3;
+	border: .22em solid #EAE4E3;
 	border-radius: 50%;
 	min-width: 88.24%;
 	min-height: 88.24%;	
 	font-weight: 700;
-	font-size: 34px
+	font-size: 16px
 } 
 
 .gauge .ticks {
@@ -191,6 +191,7 @@
 	width: 10%;
 	text-align: center;	
 	height: 0;
+	font-size: 16px;
 }
 
 .gauge .labels .value-label-min {
@@ -198,7 +199,7 @@
 	top: 72%;
 	left: 22%;
 	width: 10%;
-	font-size: 16px;
+	font-size: 8px;
 	height: 0
 }
 
@@ -207,7 +208,7 @@
 	top: 72%;
 	left: 70%;
 	width: 10%;
-	font-size: 16px;
+	font-size: 8px;
 	height: 0
 }
 
@@ -216,7 +217,7 @@
 	top: 18%;
 	left: 45%;
 	width: 10%;
-	font-size: 16px;
+	font-size: 8px;
 	height: 0
 }
 
