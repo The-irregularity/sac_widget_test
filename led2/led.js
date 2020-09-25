@@ -94,5 +94,5 @@
 			this.render(this.$value);
 		}
 	}	
-	customElements.define("com-demo-led", Led);
+	customElements.define("com-demo-led2", Led);
 })();

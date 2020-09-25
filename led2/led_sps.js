@@ -43,6 +43,6 @@
 		}
 	}
 
-customElements.define("com-demo-led-sps", LedSps);
+customElements.define("com-demo-led2-sps", LedSps);
 
 })();

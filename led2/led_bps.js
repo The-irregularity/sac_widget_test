@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-demo-led-bps", LedBps);
+	customElements.define("com-demo-led2-bps", LedBps);
 })();
