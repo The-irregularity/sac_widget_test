@@ -67,7 +67,7 @@
 .gauge {
 	position: relative;
 	background: var(--gauge-bg);
-	border: .22em solid #EAE4E3;
+	border: .5em solid #EAE4E3;
 	border-radius: 50%;
 	min-width: 88.24%;
 	min-height: 88.24%;	
