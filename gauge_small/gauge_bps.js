@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("com-demo-gauge1-bps", GuageBps);
+	customElements.define("com-demo-gauge_small-bps", GuageBps);
 })();

@@ -447,5 +447,5 @@
 			this.render(this.$value, this.$info);
 		}
 	}	
-	customElements.define("com-demo-gauge1", Box);
+	customElements.define("com-demo-gauge_small", Box);
 })();

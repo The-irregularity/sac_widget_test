@@ -43,4 +43,4 @@
 		}
 	}
 
-customElements.define("com-demo-gauge1-sps", GaugeSps);
+customElements.define("com-demo-gauge_small-sps", GaugeSps);
