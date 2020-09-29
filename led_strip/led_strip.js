@@ -29,9 +29,9 @@
 		  margin: 0 auto;
 		  width: 200px;
 		  height: 12px;
-		  background-color: #F00;
+		  background-color: #ABFF00;
 		  border-radius: 10%;
-		  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  
+		  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  
 		}
 			
 		
