@@ -30,7 +30,7 @@
 		  width: 200px;
 		  height: 12px;
 		  background-color: #F00;
-		  border-radius: 50%;
+		  border-radius: 10%;
 		  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  
 		}
 			
@@ -67,19 +67,19 @@
 			switch(val) {
 			  case 1:
 				// Red
-				this.$style.innerHTML = ':host { 	border-radius: 10px; display: block; } body {   background: #fff; }  .led-box {   height: 20px;   width: 210px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 200px;   height: 12px;   background-color: #F00;   border-radius: 50%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { 	border-radius: 10px; display: block; } body {   background: #fff; }  .led-box {   height: 20px;   width: 210px;   margin: 10px 0;   float: left; }  .led-box p {   font-size: 12px;   text-align: center;   margin: 1em; }  .led-green {   margin: 0 auto;   width: 200px;   height: 12px;   background-color: #F00;   border-radius: 10%;   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;		  }';
 				break;
 			  case 2:
 				// Yellow
-				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; }  .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; }  .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #FF0; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; }  .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; }  .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #FF0; border-radius: 10%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #FF0 0 2px 12px;		  }';
 				break;
 			  case 3:
 				// Green
-				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; } .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #ABFF00; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; } .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #ABFF00; border-radius: 10%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
 				break;
 			  default:
 			  //Green
-				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; } .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #ABFF00; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
+				this.$style.innerHTML = ':host { border-radius: 10px; display: block; } body { background: #fff; } .led-box { height: 20px; width: 210px; margin: 10px 0; float: left; } .led-box p { font-size: 12px; text-align: center; margin: 1em; }  .led-green { margin: 0 auto; width: 200px; height: 12px; background-color: #ABFF00; border-radius: 10%; box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px;		  }';
 				break;			  
 			}
 
