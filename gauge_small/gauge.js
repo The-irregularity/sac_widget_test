@@ -411,8 +411,7 @@
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
-			this.$modvar = shadowRoot.querySelector('#modvar');
-			console.log(this.$modvar.innerHTML);			
+			this.$modvar = shadowRoot.querySelector('#modvar');			
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
