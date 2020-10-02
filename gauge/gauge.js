@@ -406,7 +406,6 @@
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			
 			this.$modvar = shadowRoot.querySelector('#modvar');
-			console.log(this.$modvar.innerHTML);			
 			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
