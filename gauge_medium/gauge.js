@@ -455,7 +455,7 @@
 			}
 			
 			if ("gtype" in changedProperties) {
-				this.$info = changedProperties["gtype"];
+				this.$gtype = changedProperties["gtype"];
 			}			
 			
 			
