@@ -454,6 +454,10 @@
 				this.$info = changedProperties["info"];
 			}
 			
+			if ("gtype" in changedProperties) {
+				this.$info = changedProperties["gtype"];
+			}			
+			
 			
 			this.render(this.$value, this.$info);
 		}
