@@ -459,7 +459,7 @@
 			}			
 			
 			
-			this.render(this.$value, this.$info);
+			this.render(this.$value, this.$info, this.$gtype);
 		}
 	}	
 	customElements.define("com-demo-gauge_medium", Box);
